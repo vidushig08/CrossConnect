@@ -15,7 +15,7 @@ CrossConnect is a web application to cater to the needs of the migrant workers (
 
 ### Backend Development:
 1. Firebase 
-2. JQuery
+2. jQuery
 
 ### Deployment:
-1. Github
+1. GitHub
