@@ -6,6 +6,8 @@
   }
 .right,.left{
     width: 50%;
+    align-items: center;
+    text-align: center;
 }
 .right{
     float: right;
@@ -13,3 +15,42 @@
 .left{
     float: left;
 }
+.form-control{
+    width: 400px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    border: 2px solid #7EBC89;
+    box-sizing: border-box;
+  }
+.address{
+    height: 100px;
+}
+.signup{
+    background: #7EBC89;
+    border-radius: 8px;
+    border: none;
+    font-family: sans-serif;
+    font-size: 18px;
+    align-items: center;
+    text-align: center;
+    color: #5B6E7F;
+    height: 32px;
+    width: 90px;
+    margin-left: 32%;
+  }
+  .signup:hover{
+    background: #FFFFFF;
+    border: 1px solid #5B6E7F;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: #7EBC89;
+  }
+
+  .icon1{
+    width: 30px;
+    height: 40px;
+    position: absolute;
+    margin-left: 10px;
+  }
