@@ -16,7 +16,8 @@
 var formRef=firebase.database().ref("Users");
 
 //Listen for form submit
-document.getElementById('signup-btn').addEventListener("click",submitForm);
+document.getElementById('signup-btn').addEventListener("click", submitForm);
+
 
 //Submit Form
 function submitForm(e){
