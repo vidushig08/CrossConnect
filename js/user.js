@@ -41,7 +41,7 @@ function submitForm(e){
   var q1a=getInputValues('q1a');
   var q1b=getInputValues('q1b');
   var q2a=getInputValues('q2a');
-  var q2a=getInputValues('q2b');
+  var q2b=getInputValues('q2b');
   var q3a=getInputValues('q3a');
   var q3b=getInputValues('q3b');
 
@@ -50,8 +50,7 @@ function submitForm(e){
 
 
   //Save form
-  saveform(name,phone,members,destination,pincode,medform1,medform2,medform3,duration,residents,summer,winter,rain,no_clothes,q1a,q1b,q2a,q2b
-    ,q3a,q3b);
+  saveform(name,phone,members,destination,pincode,medform1,medform2,medform3,duration,residents,summer,winter,rain,no_clothes,q1a,q1b,q2a,q2b,q3a,q3b);
 
  //authSignup();
 
@@ -92,8 +91,9 @@ function saveform(name,phone,members,destination,pincode,medform1,medform2,medfo
     q1b:q1b,
     q2a:q2a,
     q2b:q2b,
-    q3a:q2b,
+    q3a:q3a,
     q3b:q3b
+   
 });
 }
 
