@@ -8,8 +8,11 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--Bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+          crossorigin="anonymous">
+          
     
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -95,7 +98,7 @@
                         <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               Select grade
-                            </button>
+                            </button>                            
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                               <a class="dropdown-item" href="#">1</a>
                               <a class="dropdown-item" href="#">2</a>
@@ -170,14 +173,48 @@
             <button type="button" id="food" class="collapsible"><h4>Food</h4></button>
             <div class="content">
                 <form class="form-contents">
-                    <label for = "med-urgent">1. My family needs urgent attention for</label>
-                    <input type = "text" id = "med-urgent">
+                    <div class="fq1">
+                        <label for = "food1a" >1. We require food </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="">Option 1
+                        </label>
+                      </div>
+                      <div class="form-check-inline">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="">Option 2
+                        </label>
+                      </div>
+                      
+                    <!-- <div class="food-question form-check">
+                        <label for = "food" class="form-check-label">1. We require food </label>
+                        <label class="food-label"> Yes <input type = "radio" class="form-check-input" id = ""> </label>
+                        <label class="food-label"> No <input type = "radio" class="form-check-input" id = ""> </label>
+                    </div>
+                    <div class="food-question form-check">
+                        <label for = "food" class="form-check-label">2. Our meal type </label>
+                        <label class="food-label"> Non-veg <input type = "radio" class="form-check-input" id = ""> </label>
+                        <label class="food-label"> Veg <input type = "radio" class="form-check-input"id = ""> </label>
+                    </div>
+                    <div class="food-question ">
+                        <label for = "food" class="form-check-label">3. We have infants </label>
+                        <label class="food-label"> Yes <input type = "radio" class="form-check-input" id = ""> </label>
+                        <label class="food-label"> No <input type = "radio" class="form-check-input" id = ""> </label>
+                    </div> -->
                 </form>
             </div>
         </div>
             <script src="accordion.js"></script>
         </div>
-
+        <input class="btn btn-primary btn-lg" type="submit" value="Submit">
+             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+            integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+            crossorigin="anonymous">
+    </script>
         <script src="" async defer></script>
     </body>
 </html>
