@@ -32,12 +32,26 @@ function submitForm(e){
   var medform1=getInputValues('urgent1');
   var medform2=getInputValues('urgent2');
   var medform3=getInputValues('urgent3');
+  var duration=getInputValues('duration');
+  var residents=getInputValues('residents');
+  var summer=getInputValues('summer');
+  var winter=getInputValues('winter');
+  var rain=getInputValues('rain');
+  var no_clothes=getInputValues('no-of-clothes');
+  var q1a=getInputValues('q1a');
+  var q1b=getInputValues('q1b');
+  var q2a=getInputValues('q2a');
+  var q2a=getInputValues('q2b');
+  var q3a=getInputValues('q3a');
+  var q3b=getInputValues('q3b');
+
 
 
 
 
   //Save form
-  saveform(name,phone,members,destination,pincode,medform1,medform2,medform3);
+  saveform(name,phone,members,destination,pincode,medform1,medform2,medform3,duration,residents,summer,winter,rain,no_clothes,q1a,q1b,q2a,q2b
+    ,q3a,q3b);
 
  //authSignup();
 
@@ -56,7 +70,8 @@ function getInputValues(id){
 }
 
 //Save message to firebase
-function saveform(name,phone,members,destination,pincode,medform1,medform2,medform3){
+function saveform(name,phone,members,destination,pincode,medform1,medform2,medform3,duration,residents,summer,winter,rain,no_clothes,q1a,q1b,q2a,q2b
+    ,q3a,q3b){
   var newForm = formref.push();
   newForm.set({
     name:name,
@@ -66,7 +81,19 @@ function saveform(name,phone,members,destination,pincode,medform1,medform2,medfo
     pincode:pincode,
     medform1:medform1,
     medform2:medform2,
-    medform3:medform3
+    medform3:medform3,
+    duration:duration,
+    residents:residents,
+    summer:summer,
+    winter:winter,
+    rain:rain,
+    no_clothes:no_clothes,
+    q1a:q1a,
+    q1b:q1b,
+    q2a:q2a,
+    q2b:q2b,
+    q3a:q2b,
+    q3b:q3b
 });
 }
 

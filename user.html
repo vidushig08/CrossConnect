@@ -157,12 +157,12 @@
                     <form class = "house-ip form-contents">
                         <div class = "house-form">
                             <label class = "house-label">1. The duration of my stay would be:</label><br/>
-                            <textarea class="form-control" rows="5" ></textarea>
+                            <textarea id="duration" class="form-control" rows="5" ></textarea>
                             
                         </div>
                         <div class = "house-form">
                             <label class = "house-label">2. Number of residents:</label><br/>
-                            <input type="number" min="1" step="1" class="form-control" id="no-of-resident">
+                            <input type="number" id="residents" min="1" step="1" class="form-control" id="no-of-resident">
                         </div>
                 </form>
             </div>
@@ -173,12 +173,12 @@
                 <form class = "clothing-form form-contents">
                     <label class = "cloth-label">1. We require clothing for the season:</label>
                     <div class = "seasons">
-                    <button type = "button" class = "btn btn-default s-btn ">Summer</button>
-                    <button type = "button" class = "btn btn-default s-btn ">Winter</button>
-                    <button type = "button" class = "btn btn-default s-btn ">Rain</button>
+                    <button type = "button" id="summer" class = "btn btn-default s-btn ">Summer</button>
+                    <button type = "button" id="winter" class = "btn btn-default s-btn ">Winter</button>
+                    <button type = "button" id="rain" class = "btn btn-default s-btn ">Rain</button>
                     </div>
                     <label class = "cloth-label">2. Quantity of clothing</label>
-                    <input type = "number" class = "qty-clothing">
+                    <input type = "number" id="no-of-clothes" class = "qty-clothing">
                 </form>
             </div>
         </div>
@@ -272,6 +272,6 @@
 <script src="js/user.js"></script>
 
 
-    <script>
+    </script>
     </body>
 </html>
