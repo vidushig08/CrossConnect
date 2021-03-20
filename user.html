@@ -13,8 +13,33 @@
     
         <link rel="stylesheet" href="./css/user.css">
     </head>
-    <body class = "form-body">
-        <h1 class = "heading">Personal Information</h1>
+    <body>
+        <header>
+            
+            <nav class="navbar navbar-expand-lg navbar-light navig">
+                <a class="navbar-brand " style="color: #7EBC89;
+                font-weight: bold;" href="#"><img src="assets/logo.svg" width="30" height="30" class="d-inline-block align-top"> crossconnect</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                    <div class="navbar-nav options">
+                    <a class="nav-item nav-link active" href="index.html">Home</a> 
+                    <a class="nav-item nav-link" href="#pinfo">Personal Information</a>
+                    <a class="nav-item nav-link" href="#services">Medicinal</a>
+                    <a class="nav-item nav-link" href="#why-us">Education</a>
+                    <a class="nav-item nav-link" href="#features">Housing</a>
+                    <a class="nav-item nav-link" href="#features">Clothing</a>
+                    <a class="nav-item nav-link" href="#features">Food</a>
+                    </div>
+                </div>
+                <ul>
+                    
+                </ul>
+            </nav>
+        </header>
+        <div class = "form-body" id="pinfo">
+            <h1 class = "heading">Personal Information</h1>
         <form class = "user-form">
             <div class="form-group">
               <input type="text" class="form-control" id="username" placeholder="Name">
@@ -33,6 +58,8 @@
                 <input type="number" class="form-control" id="pincode" placeholder="Pincode">
             </div>
           </form>
+        </div>
+        
         
         <script src="" async defer></script>
     </body>
