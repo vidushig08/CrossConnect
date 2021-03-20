@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!--Firebase initialise-->
+    <script>
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyA_gMm8PUQVPsU7irbiqaw866jccOAsK40",
+      authDomain: "crossconnect-de8ec.firebaseapp.com",
+      projectId: "crossconnect-de8ec",
+      storageBucket: "crossconnect-de8ec.appspot.com",
+      messagingSenderId: "208292611837",
+      appId: "1:208292611837:web:f7f46920dbd3a825b62094",
+      measurementId: "G-20RLVLNJVK"
+    };
+    </script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,5 +63,40 @@
             <button class="signup" id="signup-btn" type="submit">SIGNUP</button><br><br><br><br>
         </div>
     </form>
+
+    
+<!--scripts-->
+<script>
+
+//button listeners
+$("#signup-btn").click(function(){
+    var email=$("#signupEmail").val();
+    var password=$("#signupPassword").val();
+    console.log("New="+email+"  "+password);
+    SignIn(email,password);
+});
+
+
+
+function SignIn(email,password){
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+//   .then((userCredential) => {
+//     // Signed in 
+//     var user = userCredential.user;
+//     // ...
+//   })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log(errorMessage);
+    // ..
+  });
+}
+
+    
+</script>
+
+
+
 </body>
 </html>
