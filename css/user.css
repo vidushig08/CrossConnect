@@ -1,3 +1,6 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
 .form-body{
     display: flex;
     flex-direction: column;
@@ -58,6 +61,7 @@
 .collapsible h4:hover{
     font-weight: bolder;
 }
+button:focus {outline:0;}
 .primary{
     display: flex;
     flex-direction: row;
@@ -97,10 +101,11 @@
     font-size: 20px;
     padding: 10px;
 }
-.cloth-label-1{
+/* .cloth-label-1{
     font-size: 20px;
 }
 .cloth-label-2{
     font-size: 20px;
     margin-top: 20px;
-}
+} */
+
