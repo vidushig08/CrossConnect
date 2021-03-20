@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Personal Information</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--Bootstrap-->
@@ -12,6 +12,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     
         <link rel="stylesheet" href="./css/user.css">
+        <link rel="stylesheet" href="accordion.css">
     </head>
     <body>
         <header>
@@ -22,9 +23,9 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
-                <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav options">
-                    <a class="nav-item nav-link active" href="index.html">Home</a> 
+                    <a class="nav-item nav-link active" href="index.html">Home</a>
                     <a class="nav-item nav-link" href="#pinfo">Personal Information</a>
                     <a class="nav-item nav-link" href="#services">Medicinal</a>
                     <a class="nav-item nav-link" href="#why-us">Education</a>
@@ -59,8 +60,119 @@
             </div>
           </form>
         </div>
-        
-        
+
+        <div class = "collapsible-forms">
+            <div class = "col-form">
+            <button type="button" class="collapsible"><h4>Medicinal</h4></button>
+            <div class="content">
+                <form class = "med-ip">
+                    <div class = "med-form">
+                        <label class = "med-label">1. My family needs urgent attention for:</label><br/>
+                        <input type = "text" class = "med-input" id = "urgent">
+                    </div>
+                    <div class = "med-form">
+                        <label class = "med-label">2. Someone in my family has health issues like:</label><br/>
+                        <input type = "text" class = "med-input" id = "urgent" placeholder = "Eg. high blood pressure, diabetes etc.">
+                    </div>
+                    <div class = "med-form">
+                        <label class = "med-label">3. We will need medicine for:</label><br/>
+                        <input type = "text" class = "med-input" id = "urgent">
+                    </div>
+                </form>
+            </div>
+            </div>
+            <div class = "col-form">
+            <button type="button" class="collapsible"><h4>Education</h4></button>
+            <div class="content">
+                <form>
+                    <p>My kids are in the following grades:</p>
+                    <div class = "primary">
+                        <label for = "dd-primary">Primary (1-4)</label>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Select grade
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" href="#">1</a>
+                              <a class="dropdown-item" href="#">2</a>
+                              <a class="dropdown-item" href="#">3</a>
+                              <a class="dropdown-item" href="#">4</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class = "secondary">
+                        <label for = "dd-secondary">Secondary (5-10)</label>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Select grade
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" href="#">5</a>
+                              <a class="dropdown-item" href="#">6</a>
+                              <a class="dropdown-item" href="#">7</a>
+                              <a class="dropdown-item" href="#">8</a>
+                              <a class="dropdown-item" href="#">9</a>
+                              <a class="dropdown-item" href="#">10</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class = "high-school">
+                        <label for = "dd-high-school">High School (11-12)</label>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Select grade
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" href="#">11</a>
+                              <a class="dropdown-item" href="#">12</a>
+                            </div>
+                          </div> 
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class = "col-form">
+            <button type="button" class="collapsible"><h4>Housing</h4></button>
+            <div class="content">
+                    <form class = "house-ip">
+                        <div class = "house-form">
+                            <label class = "house-label">1. The duration of my stay would be:</label><br/>
+                            <input type = "text" class = "house-input" id = "urgent">
+                        </div>
+                        <div class = "house-form">
+                            <label class = "house-label">2. Number of residents:</label><br/>
+                            <input type = "text" class = "house-input" id = "urgent">
+                        </div>
+                </form>
+            </div>
+        </div>
+        <div class = "col-form">
+            <button type="button" class="collapsible"><h4>Clothing</h4></button>
+            <div class="content">
+                <form class = "clothing-form">
+                    <label class = "cloth-label-1">1. We require clothing for the season:</label>
+                    <div class = "seasons">
+                    <button type = "button" class = "btn btn-default">Summer</button>
+                    <button type = "button" class = "btn btn-default">Winter</button>
+                    <button type = "button" class = "btn btn-default">Rain</button>
+                    </div>
+                    <label class = "cloth-label-2">2. Quantity of clothing</label>
+                    <input type = "number" class = "qty-clothing">
+                </form>
+            </div>
+        </div>
+        <div class = "col-form">
+            <button type="button" class="collapsible"><h4>Food</h4></button>
+            <div class="content">
+                <form>
+                    <label for = "med-urgent">1. My family needs urgent attention for</label>
+                    <input type = "text" id = "med-urgent">
+                </form>
+            </div>
+        </div>
+            <script src="accordion.js"></script>
+        </div>
+
         <script src="" async defer></script>
     </body>
 </html>
