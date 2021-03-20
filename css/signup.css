@@ -54,3 +54,12 @@
     position: absolute;
     margin-left: 10px;
   }
+
+  .alert{
+    text-align: center;
+    padding: 10px;
+    background-color: #79c879;
+    color: #fff;
+    margin-bottom: 10px;
+    display: none;
+  }
