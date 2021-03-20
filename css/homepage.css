@@ -24,9 +24,9 @@ h2{
     border: 2px solid #7EBC89;
     box-sizing: border-box;
     border-radius: 8px;
-    font-size: 28px;
+    font-size: 20px;
     color: #5B6E7F;
-    width: 300px;
+    width: 250px;
     height: 50px;
 }
 .assist:hover{
@@ -34,14 +34,14 @@ h2{
     border: 2px solid #5B6E7F;
     box-sizing: border-box;
     border-radius: 8px;
-    font-size: 28px;
+    font-size: 20px;
     color: #7EBC89;
 }
 .NGOlink{
     font-family: sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 28px;
+    font-size: 20px;
     text-align: center;
     color: #7EBC89;
 }
