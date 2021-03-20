@@ -12,3 +12,13 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+var s = document.getElementsByClassName("s-btn");
+var n;
+
+for (n = 0; n < s.length; n++) {
+  s[n].addEventListener("click", function() {
+    this.classList.toggle("selected");
+    
+  });
+}

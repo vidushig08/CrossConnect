@@ -2,20 +2,39 @@
 
 <html lang="en">
     <head>
+        <!--jQuery-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Personal Information</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
         <!--Bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" 
+         integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+          
     
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     
         <link rel="stylesheet" href="./css/user.css">
         <link rel="stylesheet" href="accordion.css">
+
+        
+        <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+        <!-- <link rel='stylesheet' type='text/css' href='/resources/tutorial/css/example.css'> -->
+          
     </head>
     <body>
+
+       
         <header>
             
             <nav class="navbar navbar-expand-lg navbar-light navig">
@@ -28,11 +47,11 @@
                     <div class="navbar-nav options">
                     <a class="nav-item nav-link active" href="index.html">Home</a>
                     <a class="nav-item nav-link" href="#pinfo">Personal Information</a>
-                    <a class="nav-item nav-link" href="#services">Medicinal</a>
-                    <a class="nav-item nav-link" href="#why-us">Education</a>
-                    <a class="nav-item nav-link" href="#features">Housing</a>
-                    <a class="nav-item nav-link" href="#features">Clothing</a>
-                    <a class="nav-item nav-link" href="#features">Food</a>
+                    <a class="nav-item nav-link" href="#medicinal">Medicinal</a>
+                    <a class="nav-item nav-link" href="#education">Education</a>
+                    <a class="nav-item nav-link" href="#housing">Housing</a>
+                    <a class="nav-item nav-link" href="#clothing">Clothing</a>
+                    <a class="nav-item nav-link" href="#food">Food</a>
                     </div>
                 </div>
                 <ul>
@@ -51,48 +70,48 @@
             </div>
             <div class="form-group">
                 <label class = "no-of-people">Number of people in your family</label>
-                <input type="number" class="form-control" id="no-of-members">
+                <input type="number" min="1" step="1" class="form-control" id="no-of-members">
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="destination" placeholder="Destination">
             </div>
             <div class="form-group">
-                <input type="number" class="form-control" id="pincode" placeholder="Pincode">
+                <input type="text" class="form-control" id="pincode" placeholder="Pincode">
             </div>
           </form>
         </div>
 
         <div class = "collapsible-forms">
             <div class = "col-form">
-            <button type="button" class="collapsible"><h4>Medicinal</h4></button>
+            <button type="button" id="medicinal" class="collapsible"><h4>Medicinal</h4></button>
             <div class="content">
-                <form class = "med-ip">
+                <form class = "med-ip form-contents">
                     <div class = "med-form">
                         <label class = "med-label">1. My family needs urgent attention for:</label><br/>
-                        <input type = "text" class = "med-input" id = "urgent">
+                        <input type = "text" class = "med-input" id = "urgent1">
                     </div>
                     <div class = "med-form">
                         <label class = "med-label">2. Someone in my family has health issues like:</label><br/>
-                        <input type = "text" class = "med-input" id = "urgent" placeholder = "Eg. high blood pressure, diabetes etc.">
+                        <input type = "text" class = "med-input" id = "urgent2" placeholder = "Eg. high blood pressure, diabetes etc.">
                     </div>
                     <div class = "med-form">
                         <label class = "med-label">3. We will need medicine for:</label><br/>
-                        <input type = "text" class = "med-input" id = "urgent">
+                        <input type = "text" class = "med-input" id = "urgent3">
                     </div>
                 </form>
             </div>
             </div>
             <div class = "col-form">
-            <button type="button" class="collapsible"><h4>Education</h4></button>
+            <button type="button" id="education" class="collapsible"><h4>Education</h4></button>
             <div class="content">
-                <form>
-                    <p>My kids are in the following grades:</p>
-                    <div class = "primary">
+                <form class="form-contents">
+                    <p class="edu">My kids are in the following grades:</p>
+                    <div class = "primary school">
                         <label for = "dd-primary">Primary (1-4)</label>
                         <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               Select grade
-                            </button>
+                            </button>                            
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                               <a class="dropdown-item" href="#">1</a>
                               <a class="dropdown-item" href="#">2</a>
@@ -101,7 +120,7 @@
                             </div>
                           </div>
                     </div>
-                    <div class = "secondary">
+                    <div class = "secondary school">
                         <label for = "dd-secondary">Secondary (5-10)</label>
                         <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -117,7 +136,7 @@
                             </div>
                           </div>
                     </div>
-                    <div class = "high-school">
+                    <div class = "high-school school">
                         <label for = "dd-high-school">High School (11-12)</label>
                         <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -133,47 +152,126 @@
             </div>
         </div>
         <div class = "col-form">
-            <button type="button" class="collapsible"><h4>Housing</h4></button>
+            <button type="button" id="housing" class="collapsible"><h4>Housing</h4></button>
             <div class="content">
-                    <form class = "house-ip">
+                    <form class = "house-ip form-contents">
                         <div class = "house-form">
                             <label class = "house-label">1. The duration of my stay would be:</label><br/>
-                            <input type = "text" class = "house-input" id = "urgent">
+                            <textarea class="form-control" rows="5" ></textarea>
+                            
                         </div>
                         <div class = "house-form">
                             <label class = "house-label">2. Number of residents:</label><br/>
-                            <input type = "text" class = "house-input" id = "urgent">
+                            <input type="number" min="1" step="1" class="form-control" id="no-of-resident">
                         </div>
                 </form>
             </div>
         </div>
         <div class = "col-form">
-            <button type="button" class="collapsible"><h4>Clothing</h4></button>
+            <button type="button" id="clothing" class="collapsible"><h4>Clothing</h4></button>
             <div class="content">
-                <form class = "clothing-form">
-                    <label class = "cloth-label-1">1. We require clothing for the season:</label>
+                <form class = "clothing-form form-contents">
+                    <label class = "cloth-label">1. We require clothing for the season:</label>
                     <div class = "seasons">
-                    <button type = "button" class = "btn btn-default">Summer</button>
-                    <button type = "button" class = "btn btn-default">Winter</button>
-                    <button type = "button" class = "btn btn-default">Rain</button>
+                    <button type = "button" class = "btn btn-default s-btn ">Summer</button>
+                    <button type = "button" class = "btn btn-default s-btn ">Winter</button>
+                    <button type = "button" class = "btn btn-default s-btn ">Rain</button>
                     </div>
-                    <label class = "cloth-label-2">2. Quantity of clothing</label>
+                    <label class = "cloth-label">2. Quantity of clothing</label>
                     <input type = "number" class = "qty-clothing">
                 </form>
             </div>
         </div>
         <div class = "col-form">
-            <button type="button" class="collapsible"><h4>Food</h4></button>
+            <button type="button" id="food" class="collapsible"><h4>Food</h4></button>
             <div class="content">
-                <form>
-                    <label for = "med-urgent">1. My family needs urgent attention for</label>
-                    <input type = "text" id = "med-urgent">
+                <form class="form-contents">
+                    <div class="fq">
+                        <label for = "food1" >1. We require food </label>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="q1a">
+                              <input type="checkbox" name="q1" id="q1a" value="Yes" class="form-check-input" value="">Yes
+                            </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="q1b">
+                              <input type="checkbox" name="q1" id="q1b" value="No" class="form-check-input" value="">No
+                            </label>
+                        </div>
+                        <div class="fq">
+                            <label for = "food2" >2. Our meal type </label>
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                  <input type="checkbox"  name="q2" id="q2a" value="Veg" class="form-check-input" value="">Veg
+                                </label>
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                  <input type="checkbox"  name="q2" id="q2b" value="Non-veg" class="form-check-input" value="">Non-veg
+                                </label>
+                            </div>
+                            <div class="fq">
+                                <label for = "food3">3. We have infants </label>
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                      <input type="checkbox"  name="q3" id="q3a" value="Yes" class="form-check-input" value="">Yes
+                                    </label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                      <input type="checkbox"  name="q3" id="q3b" value="Yes" class="form-check-input" value="">No
+                                    </label>
+                                </div>                      
+                            </div>
                 </form>
             </div>
         </div>
             <script src="accordion.js"></script>
         </div>
-
+        <input class="btn btn-primary btn-lg sub" id="submit-but" type="submit" value="Submit">
+             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+            integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+            crossorigin="anonymous">
+    </script>
         <script src="" async defer></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+
+
+    <script>
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+          apiKey: "AIzaSyANjvf0unSqOLHfO_etLGEvAfFoPnV5Q2g",
+          authDomain: "crossconnect-1caa9.firebaseapp.com",
+          projectId: "crossconnect-1caa9",
+          storageBucket: "crossconnect-1caa9.appspot.com",
+          messagingSenderId: "1068788031671",
+          appId: "1:1068788031671:web:a03a6d9c126aa3e1fb2d32",
+          measurementId: "G-G3VMZTWP7N"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+      </script>
+
+<script src="js/user.js"></script>
+
+
+    <script>
     </body>
 </html>
