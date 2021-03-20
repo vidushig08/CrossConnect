@@ -186,41 +186,49 @@
             <button type="button" id="food" class="collapsible"><h4>Food</h4></button>
             <div class="content">
                 <form class="form-contents">
-                    <div class="fq1">
-                        <label for = "food1a" >1. We require food </label>
-                    </div>
-                    <div class="form-check-inline">
-                        <label class="form-check-label">
-                          <input type="checkbox" class="form-check-input" value="">Option 1
-                        </label>
-                      </div>
-                      <div class="form-check-inline">
-                        <label class="form-check-label">
-                          <input type="checkbox" class="form-check-input" value="">Option 2
-                        </label>
-                      </div>
-                      
-                    <!-- <div class="food-question form-check">
-                        <label for = "food" class="form-check-label">1. We require food </label>
-                        <label class="food-label"> Yes <input type = "radio" class="form-check-input" id = ""> </label>
-                        <label class="food-label"> No <input type = "radio" class="form-check-input" id = ""> </label>
-                    </div>
-                    <div class="food-question form-check">
-                        <label for = "food" class="form-check-label">2. Our meal type </label>
-                        <label class="food-label"> Non-veg <input type = "radio" class="form-check-input" id = ""> </label>
-                        <label class="food-label"> Veg <input type = "radio" class="form-check-input"id = ""> </label>
-                    </div>
-                    <div class="food-question ">
-                        <label for = "food" class="form-check-label">3. We have infants </label>
-                        <label class="food-label"> Yes <input type = "radio" class="form-check-input" id = ""> </label>
-                        <label class="food-label"> No <input type = "radio" class="form-check-input" id = ""> </label>
-                    </div> -->
+                    <div class="fq">
+                        <label for = "food1" >1. We require food </label>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="q1a">
+                              <input type="checkbox" name="q1" id="q1a" value="Yes" class="form-check-input" value="">Yes
+                            </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="q1b">
+                              <input type="checkbox" name="q1" id="q1b" value="No" class="form-check-input" value="">No
+                            </label>
+                        </div>
+                        <div class="fq">
+                            <label for = "food2" >2. Our meal type </label>
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                  <input type="checkbox"  name="q2" id="q2a" value="Veg" class="form-check-input" value="">Veg
+                                </label>
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                  <input type="checkbox"  name="q2" id="q2b" value="Non-veg" class="form-check-input" value="">Non-veg
+                                </label>
+                            </div>
+                            <div class="fq">
+                                <label for = "food3">3. We have infants </label>
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                      <input type="checkbox"  name="q3" id="q3a" value="Yes" class="form-check-input" value="">Yes
+                                    </label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                      <input type="checkbox"  name="q3" id="q3b" value="Yes" class="form-check-input" value="">No
+                                    </label>
+                                </div>                      
+                            </div>
                 </form>
             </div>
         </div>
             <script src="accordion.js"></script>
         </div>
-        <input class="btn btn-primary btn-lg" id="submit-but" type="submit" value="Submit">
+        <input class="btn btn-primary btn-lg sub" id="submit-but" type="submit" value="Submit">
              <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
