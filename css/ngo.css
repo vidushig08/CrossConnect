@@ -1,0 +1,37 @@
+.navig{
+    background-color: #C1DBB3;
+    color: #5B6E7F;
+}
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+.big-div{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.btn-primary{
+    float: right;
+    background-color: #c1dbb3;
+    color: #5b6e7f;
+    border: 1px solid #5B6E7F;
+}
+.btn-primary:hover{
+    background-color: #ffffff;
+    color: #7ebc89;
+    border: 1px solid #5B6E7F;
+}
+.card{
+    margin-bottom: 1%;
+}
+.header-city-date{
+    font-size: 25px;
+    padding: 20px;
+    color: #5b6e7f;
+}

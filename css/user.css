@@ -101,6 +101,17 @@ button:focus {outline:0;}
     font-size: 20px;
     padding: 10px;
 }
+.sub{
+    float: center;
+    background-color: #c1dbb3;
+    color: #5b6e7f;
+    border: 1px solid #5B6E7F;
+}
+.sub:hover{
+    background-color: #ffffff;
+    color: #7ebc89;
+    border: 1px solid #5B6E7F;
+}
 /* .cloth-label-1{
     font-size: 20px;
 }
