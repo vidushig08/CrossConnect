@@ -21,3 +21,11 @@ function createCard(person_name, members, phone, date){
 for (i = 0; i < n; i++) {
     createCard(person_name, members, phone, date);
 }
+
+  var userref=firebase.database().ref("Workers");
+  userref.orderByChild("destination").equalTo("Mumbai").on('value',function(snapshot){
+  console.log(snapshot.val())
+  });
+
+
+
